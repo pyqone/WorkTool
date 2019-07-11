@@ -3,6 +3,7 @@ encoding//src/test/java=UTF-8
 encoding//src/test/java/test/otherjar=GBK
 encoding//src/test/java/test/pres/tool/text=GBK
 encoding//src/test/java/test/pres/tool/text/TestDisposeText.java=GBK
+encoding//src/test/java/test/pres/tool/text/test.txt=UTF-8
 encoding//src/test/java/test/pres/tool/text/\u6625.txt=UTF-8
 encoding//src/test/java/test/pres/tool/text/\u66252.txt=UTF-8
 encoding/<project>=UTF-8

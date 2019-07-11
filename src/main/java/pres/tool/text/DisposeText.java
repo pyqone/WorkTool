@@ -28,16 +28,16 @@ import com.opencsv.CSVReader;
  * <b>文件名：</b>DisposeText.java
  * </p>
  * <p>
- * <b>用途：</b>用于
+ * <b>用途：</b>用于对文件中的文本进行处理，以简化日常工作中对文本的内容的测试
  * </p>
  * <p>
- * <b>编码时间：</b>2019年7月4日下午7:08:12
+ * <b>编码时间：</b>2019年7月4日 07:08
  * </p>
  * <p>
- * <b>修改时间：</b>2019年7月4日下午7:08:12
+ * <b>修改时间：</b>2019年7月11日 09:12
  * </p>
  * 
- * @author
+ * @author 彭宇琦
  * @version Ver1.0
  * @since JDK 1.8
  */
@@ -59,29 +59,9 @@ public class DisposeText {
 		// 存储不在目标文件中的词语
 		ArrayList<String> words = new ArrayList<>();
 
-		// 定义存储切分词语的容器
-		HashMap<String, Integer> testTextMap = new HashMap<>(16);
-		HashMap<String, Integer> targeTextMap = new HashMap<>(16);
-		// 对文本按照标记进行切分，并将切分结果存储在容器中，并存储该词语在本文中出现的次数
-		// 使用lambda表达式形式读取
-		// 对待测文本进行切分
-		split(readFile(testFile), LINE).forEach(element -> {
-			// 判断map是否已经存在该词语，若存在，则将key对应的value加上1
-			if (testTextMap.containsKey(element)) {
-				testTextMap.put(element, testTextMap.get(element) + 1);
-			} else {
-				testTextMap.put(element, 1);
-			}
-		});
-		// 对目标文本进行切分
-		split(readFile(targetFile), LINE).forEach(element -> {
-			// 判断map是否已经存在该词语，若存在，则将key对应的value加上1
-			if (targeTextMap.containsKey(element)) {
-				targeTextMap.put(element, targeTextMap.get(element) + 1);
-			} else {
-				targeTextMap.put(element, 1);
-			}
-		});
+		// 定义存储切分词语的容器，并存储其不重复的单词
+		HashMap<String, Integer> testTextMap = saveWord(split(readFile(testFile), LINE));
+		HashMap<String, Integer> targeTextMap = saveWord(split(readFile(targetFile), LINE));
 
 		// 对比结果
 		// 定义存储不在目标文件的词语
@@ -182,6 +162,20 @@ public class DisposeText {
 
 		// 返回结果
 		return result;
+	}
+	
+	/**
+	 * 该方法用于对文本中单词进行去重，输出不重复单词
+	 * @param testFile 待测文件
+	 * @return 去重后的单词数组
+	 * @throws IOException
+	 */
+	public static String[] wordDelDuplication(File testFile) throws IOException {
+		//读取、切分并存储文本不重复的单词
+		HashMap<String, Integer> result = saveWord(split(readFile(testFile), LINE));
+		
+		//将不重复的单词转换成字符串数组，并返回该数组
+		return result.keySet().toArray(new String[] {});
 	}
 
 	/**
@@ -316,8 +310,12 @@ public class DisposeText {
 		for (int i = 0; i < sheet.getLastRowNum(); i++) {
 			Row row = sheet.getRow(i);
 			for (int j = 0; j < row.getLastCellNum(); j++) {
-				Cell cell = row.getCell(j);
-				text += (cell.toString() + LINE);
+				try {
+					Cell cell = row.getCell(j);
+					text += (cell.toString() + LINE);
+				} catch(NullPointerException e) {
+					//当读取到的列表为空时，则会抛出空指针的异常，此时不对该行进行存储
+				}
 			}
 		}
 
@@ -391,5 +389,21 @@ public class DisposeText {
 			c = temp;
 		}
 		return c;
+	}
+	
+	private static HashMap<String, Integer> saveWord(Collection<String> words) {
+		HashMap<String, Integer> result = new HashMap<>(16);
+		
+		//存储不重复的单词，并存储其在文中出现的次数
+		words.forEach(element -> {
+			// 判断map是否已经存在该词语，若存在，则将key对应的value加上1
+			if (result.containsKey(element)) {
+				result.put(element, result.get(element) + 1);
+			} else {
+				result.put(element, 1);
+			}
+		});
+		
+		return result;
 	}
 }

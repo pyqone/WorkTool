@@ -74,4 +74,13 @@ public class TestDisposeText {
 			System.out.println("---------------------");
 		}
 	}
+	
+	@Test
+	public void test_04_wordDelDuplication() throws IOException {
+		File testFile = new File("src/test/java/test/pres/tool/text/test.txt");
+		
+		for (String s : DisposeText.wordDelDuplication(testFile)) {
+			System.out.println(s);
+		}
+	}
 }
