@@ -1,4 +1,4 @@
-package test.pres.tool.text;
+package test.pres.tool.file;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-import pres.tool.text.DisposeText;
+import pres.tool.file.DisposeText;
 
 public class TestDisposeText {
 	/**
@@ -37,7 +37,7 @@ public class TestDisposeText {
 	}
 	
 	/**
-	 * ²âÊÔcompareFileWord()·½·¨
+	 * ï¿½ï¿½ï¿½ï¿½compareFileWord()ï¿½ï¿½ï¿½ï¿½
 	 * @throws IOException
 	 */
 	@Test
@@ -52,25 +52,25 @@ public class TestDisposeText {
 	}
 	
 	/**
-	 * ²âÊÔtextDelDuplication()·½·¨
+	 * ï¿½ï¿½ï¿½ï¿½textDelDuplication()ï¿½ï¿½ï¿½ï¿½
 	 * @throws IOException
 	 */
 	@Test
 	public void test_02_textDelDuplication() throws IOException {
-		System.out.println(DisposeText.textDelDuplication(new File("src/test/java/test/pres/tool/text/´º.txt")));
+		System.out.println(DisposeText.textDelDuplication(new File("src/test/java/test/pres/tool/text/ï¿½ï¿½.txt")));
 	}
 	
 	/**
-	 * ²âÊÔcompareFileText()·½·¨
+	 * ï¿½ï¿½ï¿½ï¿½compareFileText()ï¿½ï¿½ï¿½ï¿½
 	 * @throws IOException
 	 */
 	@Test
 	public void test_03_compareFileText() throws IOException {
-		File testFile = new File("src/test/java/test/pres/tool/text/´º2.txt");
-		File targeFile = new File("src/test/java/test/pres/tool/text/´º.txt");
-		for (String[] texts : DisposeText.compareFileText(testFile, targeFile, "\n", "¡£", "£¬")) {
-			System.out.println("´ý²âÎÄ£º" + texts[0]);
-			System.out.println("Ä¿±êÎÄ£º" + texts[1]);
+		File testFile = new File("src/test/java/test/pres/tool/text/ï¿½ï¿½2.txt");
+		File targeFile = new File("src/test/java/test/pres/tool/text/ï¿½ï¿½.txt");
+		for (String[] texts : DisposeText.compareFileText(testFile, targeFile, "\n", "ï¿½ï¿½", "ï¿½ï¿½")) {
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½" + texts[0]);
+			System.out.println("Ä¿ï¿½ï¿½ï¿½Ä£ï¿½" + texts[1]);
 			System.out.println("---------------------");
 		}
 	}

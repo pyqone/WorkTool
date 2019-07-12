@@ -1,4 +1,4 @@
-package pres.tool.text;
+package pres.tool.file;
 
 import java.io.BufferedReader;
 import java.io.File;

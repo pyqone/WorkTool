@@ -1,4 +1,4 @@
-package pres.tool.text;
+package pres.tool.file;
 
 public class UnsupportedFileException extends RuntimeException {
 
