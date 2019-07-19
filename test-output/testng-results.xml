@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="74" started-at="2019-07-11T01:02:29Z" finished-at="2019-07-11T01:02:29Z">
+  <suite name="Default suite" duration-ms="691" started-at="2019-07-15T05:08:36Z" finished-at="2019-07-15T05:08:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="74" started-at="2019-07-11T01:02:29Z" finished-at="2019-07-11T01:02:29Z">
-      <class name="test.pres.tool.text.TestDisposeText">
-        <test-method status="PASS" signature="test_04_wordDelDuplication()[pri:0, instance:test.pres.tool.text.TestDisposeText@4d3167f4]" name="test_04_wordDelDuplication" duration-ms="56" started-at="2019-07-11T01:02:29Z" finished-at="2019-07-11T01:02:29Z">
+    <test name="Default test" duration-ms="691" started-at="2019-07-15T05:08:36Z" finished-at="2019-07-15T05:08:36Z">
+      <class name="test.pres.tool.file.TestDisposeText">
+        <test-method status="PASS" signature="test_04_wordDelDuplication()[pri:0, instance:test.pres.tool.file.TestDisposeText@4d3167f4]" name="test_04_wordDelDuplication" duration-ms="671" started-at="2019-07-15T05:08:36Z" finished-at="2019-07-15T05:08:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_04_wordDelDuplication -->
-      </class> <!-- test.pres.tool.text.TestDisposeText -->
+      </class> <!-- test.pres.tool.file.TestDisposeText -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

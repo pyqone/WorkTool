@@ -77,8 +77,8 @@ public class TestDisposeText {
 	
 	@Test
 	public void test_04_wordDelDuplication() throws IOException {
-		File testFile = new File("src/test/java/test/pres/tool/text/test.txt");
-		
+//		File testFile = new File("src/test/java/test/pres/tool/text/test.txt");
+		File testFile = new File("D:\\6.programe\\tool\\eclipse_java_workspace\\GuiJianTongProjected\\src\\main\\java\\com\\selenium\\project\\…Ì∑›÷§.xlsx");
 		for (String s : DisposeText.wordDelDuplication(testFile)) {
 			System.out.println(s);
 		}
