@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="691" started-at="2019-07-15T05:08:36Z" finished-at="2019-07-15T05:08:36Z">
+  <suite name="Default suite" duration-ms="5160" started-at="2019-07-20T10:16:16Z" finished-at="2019-07-20T10:16:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="691" started-at="2019-07-15T05:08:36Z" finished-at="2019-07-15T05:08:36Z">
-      <class name="test.pres.tool.file.TestDisposeText">
-        <test-method status="PASS" signature="test_04_wordDelDuplication()[pri:0, instance:test.pres.tool.file.TestDisposeText@4d3167f4]" name="test_04_wordDelDuplication" duration-ms="671" started-at="2019-07-15T05:08:36Z" finished-at="2019-07-15T05:08:36Z">
+    <test name="Default test" duration-ms="5160" started-at="2019-07-20T10:16:16Z" finished-at="2019-07-20T10:16:21Z">
+      <class name="test.pres.tool.web.TestWebDataToFile">
+        <test-method status="PASS" signature="test_03_webListDataToFile()[pri:0, instance:test.pres.tool.web.TestWebDataToFile@ed9d034]" name="test_03_webListDataToFile" duration-ms="5141" started-at="2019-07-20T10:16:16Z" finished-at="2019-07-20T10:16:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_04_wordDelDuplication -->
-      </class> <!-- test.pres.tool.file.TestDisposeText -->
+        </test-method> <!-- test_03_webListDataToFile -->
+      </class> <!-- test.pres.tool.web.TestWebDataToFile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.pres.tool.text.TestDisposeText">
+      <class name="test.pres.tool.web.TestWebDataToFile">
         <methods>
-          <include name="test_03_compareFileText"/>
+          <include name="test_03_webListDataToFile"/>
         </methods>
-      </class> <!-- test.pres.tool.text.TestDisposeText -->
+      </class> <!-- test.pres.tool.web.TestWebDataToFile -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
