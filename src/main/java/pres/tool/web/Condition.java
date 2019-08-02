@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.regex.Pattern;
 
+import org.openqa.selenium.WebDriver;
+
+import pres.auxiliary.selenium.list.WebElementEventList;
+
 /**
  * <p>
  * <b>文件名：</b>Condition.java
@@ -24,7 +28,7 @@ import java.util.regex.Pattern;
  * <b>编码时间：</b>2019年7月28日下午2:13:59
  * </p>
  * <p>
- * <b>修改时间：</b>2019年7月28日下午2:13:59
+ * <b>修改时间：</b>2019年7月31日下午7:03:59
  * </p>
  * 
  * @author 彭宇琦
@@ -46,6 +50,16 @@ public class Condition {
 	 * 约束类型
 	 */
 	private ConstraintType type;
+
+	/**
+	 * 用于存储元素的标题
+	 */
+	private String title;
+
+	/**
+	 * 用于通过列表元素定位方式获取到列表的WebElementEventList对象
+	 */
+	private WebElementEventList weel;
 
 	/**
 	 * 定义日期约束类型的传入格式
@@ -81,16 +95,18 @@ public class Condition {
 	private final String LIMIT_UN_EQUALS = "0";
 
 	/**
-	 * 构造方法，传入待统计的元素基本信息
+	 * 该构造用于当元素需要做约束限制进行统计时，可以使用该构造
 	 * 
+	 * @param title       元素标题
 	 * @param element     元素的定位方式
 	 * @param type        统计的约束类型，在{@link ConstraintType}枚举类中选择相应的约束类型
 	 * @param constraints 约束条件
 	 */
-	public Condition(String element, ConstraintType type, String... constraints) {
+	public Condition(String title, String element, ConstraintType type, String... constraints) {
 		super();
 		this.element = element;
 		this.type = type;
+		this.title = title;
 
 		// 根据约束类型设置约束条件
 		if (constraints != null && constraints.length != 0) {
@@ -111,12 +127,48 @@ public class Condition {
 	}
 
 	/**
+	 * 该构造用于当元素不需要任何限制进行统计时，可使用该构造
+	 * 
+	 * @param title       元素标题
+	 * @param element     元素的定位方式
+	 */
+	public Condition(String title, String element) {
+		super();
+		this.element = element;
+		this.title = title;
+	}
+
+	/**
+	 * 该方法用于返回元素的标题
+	 * 
+	 * @return 元素的标题
+	 */
+	public String getTitle() {
+		return title;
+	}
+
+	/**
 	 * 该方法用于返回元素的定位方式
 	 * 
 	 * @return 元素的定位方式
 	 */
 	public String getElement() {
 		return element;
+	}
+
+	/**
+	 * 该方法用于返回传入的元素定位方式在页面上获取到的WebElementEventList对象
+	 * 
+	 * @param driver 页面的WebDriver对象
+	 * @return 返回列表的WebElementEventList对象
+	 */
+	public WebElementEventList getListEvent(WebDriver driver) {
+		if (weel == null) {
+			weel = new WebElementEventList(driver);
+			weel.addAll(element);
+		}
+
+		return weel;
 	}
 
 	/**
@@ -139,7 +191,7 @@ public class Condition {
 				return true;
 			}
 		} else {
-			return false;
+			return true;
 		}
 	}
 
@@ -258,7 +310,7 @@ public class Condition {
 				return true;
 			}
 		}
-		//若数据与所有的约束都不符合，则返回false
+		// 若数据与所有的约束都不符合，则返回false
 		return false;
 	}
 

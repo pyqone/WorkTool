@@ -391,6 +391,11 @@ public class DisposeText {
 		return c;
 	}
 	
+	/**
+	 * 该方法用于存储关键词出现的次数
+	 * @param words 需要写入word中的数据
+	 * @return 返回map
+	 */
 	private static HashMap<String, Integer> saveWord(Collection<String> words) {
 		HashMap<String, Integer> result = new HashMap<>(16);
 		
