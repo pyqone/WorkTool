@@ -170,6 +170,18 @@ public class Condition {
 
 		return weel;
 	}
+	
+	/**
+	 * 该方法用于返回条件约束组中是否存在约束，若存在约束，则返回true，反之，返回false
+	 * @return 返回是否存在约束条件
+	 */
+	public boolean isConstraint() {
+		if (constraints.size() == 0) {
+			return false;
+		} else {
+			return true;
+		}
+	}
 
 	/**
 	 * 该方法用于判断传入的数据是否满足约束条件。若传入的数据与约束条件的类型不符合，则默认返回false
@@ -194,7 +206,7 @@ public class Condition {
 			return true;
 		}
 	}
-
+	
 	/**
 	 * 判断数字类型数据
 	 * 

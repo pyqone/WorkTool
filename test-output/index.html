@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Administrator\AppData\Local\Temp\testng-eclipse--1571755405\testng-customsuite.xml</span>
+                    <span>C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-1670827208\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.pres.tool.web.TestCondition" hash-for-method="test_06_isConformToConstraint_string">test_06_isConformToConstraint_string</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.pres.tool.web.TestWebDataCompare" hash-for-method="test_04_dataConstraint">test_04_dataConstraint</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,14 +120,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test.pres.tool.web.TestCondition</span>
+              <span class="class-name">test.pres.tool.web.TestWebDataCompare</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="test_06_isConformToConstraint_string">
-                  </a> <!-- test_06_isConformToConstraint_string -->
-                  <span class="method-name">test_06_isConformToConstraint_string</span>
+                  <a name="test_04_dataConstraint">
+                  </a> <!-- test_04_dataConstraint -->
+                  <span class="method-name">test_04_dataConstraint</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +135,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Administrator\AppData\Local\Temp\testng-eclipse--1571755405\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Administrator\AppData\Local\Temp\testng-eclipse-1670827208\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,11 +144,11 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.pres.tool.web.TestCondition&quot;&gt;
+      &lt;class name=&quot;test.pres.tool.web.TestWebDataCompare&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;test_06_isConformToConstraint_string&quot;/&gt;
+          &lt;include name=&quot;test_04_dataConstraint&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- test.pres.tool.web.TestCondition --&gt;
+      &lt;/class&gt; &lt;!-- test.pres.tool.web.TestWebDataCompare --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -190,14 +190,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'test_06_isConformToConstraint_string')
-data.setCell(0, 2, 'test.pres.tool.web.TestCondition')
-data.setCell(0, 3, 12);
+data.setCell(0, 1, 'test_04_dataConstraint')
+data.setCell(0, 2, 'test.pres.tool.web.TestWebDataCompare')
+data.setCell(0, 3, 4905);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 ms</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -212,21 +212,19 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">5 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">test.pres.tool.web.TestCondition</span>
+              <span class="ignored-class-name">test.pres.tool.web.TestWebDataCompare</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">test_02_constraintsNumber</span>
+                <span class="ignored-method-name">test_03_numConstraint</span>
                 <br/>
-                <span class="ignored-method-name">test_03_constraintsDate</span>
+                <span class="ignored-method-name">test_05_autoGet</span>
                 <br/>
-                <span class="ignored-method-name">test_05_isConformToConstraint_date</span>
+                <span class="ignored-method-name">test_02_Constraint</span>
                 <br/>
-                <span class="ignored-method-name">test_04_isConformToConstraint_number</span>
-                <br/>
-                <span class="ignored-method-name">test_01_Condition</span>
+                <span class="ignored-method-name">test_01_noConstraint</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -238,9 +236,9 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.pres.tool.web.TestCondition</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.pres.tool.web.TestWebDataCompare</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">test_06_isConformToConstraint_string</span>
+                <span class="method-name">test_04_dataConstraint</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

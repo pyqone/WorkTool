@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -60,8 +60,8 @@ public class DisposeText {
 		ArrayList<String> words = new ArrayList<>();
 
 		// 定义存储切分词语的容器，并存储其不重复的单词
-		HashMap<String, Integer> testTextMap = saveWord(split(readFile(testFile), LINE));
-		HashMap<String, Integer> targeTextMap = saveWord(split(readFile(targetFile), LINE));
+		LinkedHashMap<String, Integer> testTextMap = saveWord(split(readFile(testFile), LINE));
+		LinkedHashMap<String, Integer> targeTextMap = saveWord(split(readFile(targetFile), LINE));
 
 		// 对比结果
 		// 定义存储不在目标文件的词语
@@ -99,7 +99,7 @@ public class DisposeText {
 		// 用于存储去重后的字符
 		String newText = "";
 		// 存储当前字符在本文本中出现的次数，使用map存储
-		HashMap<String, Integer> saveChar = new HashMap<String, Integer>(16);
+		LinkedHashMap<String, Integer> saveChar = new LinkedHashMap<String, Integer>(16);
 
 		// 循环，读取字符串中的每一个字符
 		for (int i = 0; i < text.length(); i++) {
@@ -172,7 +172,7 @@ public class DisposeText {
 	 */
 	public static String[] wordDelDuplication(File testFile) throws IOException {
 		//读取、切分并存储文本不重复的单词
-		HashMap<String, Integer> result = saveWord(split(readFile(testFile), LINE));
+		LinkedHashMap<String, Integer> result = saveWord(split(readFile(testFile), LINE));
 		
 		//将不重复的单词转换成字符串数组，并返回该数组
 		return result.keySet().toArray(new String[] {});
@@ -396,8 +396,8 @@ public class DisposeText {
 	 * @param words 需要写入word中的数据
 	 * @return 返回map
 	 */
-	private static HashMap<String, Integer> saveWord(Collection<String> words) {
-		HashMap<String, Integer> result = new HashMap<>(16);
+	private static LinkedHashMap<String, Integer> saveWord(Collection<String> words) {
+		LinkedHashMap<String, Integer> result = new LinkedHashMap<>(16);
 		
 		//存储不重复的单词，并存储其在文中出现的次数
 		words.forEach(element -> {

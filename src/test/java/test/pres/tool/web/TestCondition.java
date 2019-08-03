@@ -96,7 +96,7 @@ public class TestCondition {
 	 */
 	@Test
 	public void test_04_isConformToConstraint_number() {
-		Condition c = new Condition("测试", "html", ConstraintType.NUMBER, "(0.1, 0.5)", "[2, 4]", "[4.2, 6)", "(10, 7.5]");
+		Condition c = new Condition("测试", "html", ConstraintType.NUMBER, "(0.1, 0.5)", "[2, 4]", "[4.2, 6)", "(10, 7.5]", "[15, 15]");
 		System.out.println(c.isConformToConstraint("0"));
 		System.out.println(c.isConformToConstraint("0.1"));
 		System.out.println(c.isConformToConstraint("0.2"));
@@ -116,6 +116,7 @@ public class TestCondition {
 		System.out.println(c.isConformToConstraint("8"));
 		System.out.println(c.isConformToConstraint("10"));
 		System.out.println(c.isConformToConstraint("10.1"));
+		System.out.println(c.isConformToConstraint("15"));
 	}
 	
 	/**
@@ -150,6 +151,8 @@ public class TestCondition {
 		System.out.println(c.isConformToConstraint("abc"));
 		System.out.println(c.isConformToConstraint("abcd"));
 		System.out.println(c.isConformToConstraint("c"));
+		System.out.println("----------------");
+		System.out.println(c.isConstraint());
 	}
 	
 	/**
@@ -164,6 +167,8 @@ public class TestCondition {
 		System.out.println(c.isConformToConstraint("abc"));
 		System.out.println(c.isConformToConstraint("abcd"));
 		System.out.println(c.isConformToConstraint("c"));
+		System.out.println("----------------");
+		System.out.println(c.isConstraint());
 	}
 	
 	/**
@@ -178,5 +183,7 @@ public class TestCondition {
 		System.out.println(c.isConformToConstraint("abc"));
 		System.out.println(c.isConformToConstraint("abcd"));
 		System.out.println(c.isConformToConstraint("c"));
+		System.out.println("----------------");
+		System.out.println(c.isConstraint());
 	}
 }
