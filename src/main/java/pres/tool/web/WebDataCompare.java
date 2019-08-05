@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.LinkedHashMap;
 
 import org.apache.poi.ss.usermodel.VerticalAlignment;
+import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -238,6 +239,15 @@ public class WebDataCompare {
 			xr.createCell(valueCell).setCellValue(datas.get(data));
 			xr.getCell(valueCell).setCellStyle(xcs);
 		}
+		
+		//添加筛选项
+		sheet.setAutoFilter(CellRangeAddress.valueOf((String.valueOf((char) (65 + keyCell - 1))
+	            + "1:" + String.valueOf((char) (65 + keyCell))
+	            + "1")));
+		
+		sheet.setAutoFilter(CellRangeAddress.valueOf((String.valueOf((char) (65 + valueCell - 1))
+	            + "1:" + String.valueOf((char) (65 + valueCell))
+	            + "1")));
 		
 		//写入文件
 		xlsx.write(new FileOutputStream(targeFile));

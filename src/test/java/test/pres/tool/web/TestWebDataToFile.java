@@ -35,4 +35,13 @@ public class TestWebDataToFile {
 		WebDataToFile.webListDataToFile(new File("D:\\8.test\\WebDataToFile"), "测试文件2", "新闻标题", "/html/body/div[2]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[3]/div/a", "//*[@id='ifmbimcenter']", "//*[@id='src']");
 		WebDataToFile.webListDataToFile(new File("D:\\8.test\\WebDataToFile"), "测试文件2", "时间", "/html/body/div[2]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[4]/div", "//*[@id='ifmbimcenter']", "//*[@id='src']");
 	}
+	
+	/**
+	 * 测试多列获取
+	 * @throws IOException 
+	 */
+	@Test
+	public void test_04_IdDataToFile() throws IOException {
+		WebDataToFile.webListDataToFile(new File("D:\\8.test\\WebDataToFile"), "身份证", "身份证", "/html/body/div[2]/div[1]/div/div[2]/table[2]/tbody/tr/td");
+	}
 }
