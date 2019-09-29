@@ -3,7 +3,6 @@ package test.pres.tool.file;
 import java.io.File;
 import java.io.IOException;
 
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import pres.tool.file.DisposeText;
@@ -13,7 +12,6 @@ public class TestDisposeText {
 	 * 
 	 * @throws IOException
 	 */
-	@Ignore
 	@Test
 	public void test_01_readFile() throws IOException {
 		System.out.println("doc:");
@@ -57,7 +55,7 @@ public class TestDisposeText {
 	 */
 	@Test
 	public void test_02_textDelDuplication() throws IOException {
-		System.out.println(DisposeText.textDelDuplication(new File("src/test/java/test/pres/tool/file/春.txt")));
+		System.out.println(DisposeText.textDelDuplication(new File("src/test/java/test/pres/tool/file/姓名.xlsx")));
 	}
 	
 	/**
@@ -78,7 +76,7 @@ public class TestDisposeText {
 	@Test
 	public void test_04_wordDelDuplication() throws IOException {
 //		File testFile = new File("src/test/java/test/pres/tool/file/test.txt");
-		File testFile = new File("D:\\6.programe\\tool\\eclipse_java_workspace\\GuiJianTongProjected\\src\\main\\java\\com\\selenium\\project\\身份证.xlsx");
+		File testFile = new File("D:\\4.download\\谷歌下载\\谷歌自动化测试下载\\新建文本文档.txt");
 		for (String s : DisposeText.wordDelDuplication(testFile)) {
 			System.out.println(s);
 		}

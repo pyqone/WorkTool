@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
+<testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-08-05T09:07:15Z" name="Default suite" finished-at="2019-08-05T09:07:15Z" duration-ms="39">
+  <suite started-at="2019-09-20T02:54:23Z" name="Default suite" finished-at="2019-09-20T02:54:23Z" duration-ms="91">
     <groups>
     </groups>
-    <test started-at="2019-08-05T09:07:15Z" name="Default test" finished-at="2019-08-05T09:07:15Z" duration-ms="39">
+    <test started-at="2019-09-20T02:54:23Z" name="Default test" finished-at="2019-09-20T02:54:23Z" duration-ms="91">
       <class name="test.pres.tool.file.TestDisposeText">
-        <test-method signature="test_02_textDelDuplication()[pri:0, instance:test.pres.tool.file.TestDisposeText@359f7cdf]" started-at="2019-08-05T09:07:15Z" name="test_02_textDelDuplication" finished-at="2019-08-05T09:07:15Z" duration-ms="18" status="PASS">
+        <test-method signature="test_01_compareFileWord()[pri:0, instance:test.pres.tool.file.TestDisposeText@57f23557]" started-at="2019-09-20T10:54:23Z" name="test_01_compareFileWord" finished-at="2019-09-20T10:54:23Z" duration-ms="53" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_02_textDelDuplication -->
+        </test-method> <!-- test_01_compareFileWord -->
       </class> <!-- test.pres.tool.file.TestDisposeText -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

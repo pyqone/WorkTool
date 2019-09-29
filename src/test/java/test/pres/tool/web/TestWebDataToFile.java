@@ -14,7 +14,14 @@ public class TestWebDataToFile {
 	 */
 	@Test
 	public void test_01_webTextDataToFile() throws IOException {
-		WebDataToFile.webTextDataToFile(new File("D:\\8.test\\WebDataToFile"), "测试文件1", "//*[@id=\"datagrid-row-r1-2-0\"]/td[3]/div/a", "//*[@id='ifmbimcenter']", "//*[@id='src']");
+		WebDataToFile.webTextDataToFile(new File("D:\\8.test\\WebDataToFile"), 
+				"测试文件12", 
+				"//div[2]/table/tbody/tr/td[3]/div", 
+				"//*[contains(@src, '/project/salary/choiceUser')]");
+		WebDataToFile.webTextDataToFile(new File("D:\\8.test\\WebDataToFile"), 
+				"测试文件13", 
+				"//div[2]/table/tbody/tr/td[4]/div", 
+				"//*[contains(@src, '/project/salary/choiceUser')]");
 	}
 	
 	/**
@@ -32,8 +39,16 @@ public class TestWebDataToFile {
 	 */
 	@Test
 	public void test_03_webListDataToFile() throws IOException {
-		WebDataToFile.webListDataToFile(new File("D:\\8.test\\WebDataToFile"), "测试文件2", "新闻标题", "/html/body/div[2]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[3]/div/a", "//*[@id='ifmbimcenter']", "//*[@id='src']");
-		WebDataToFile.webListDataToFile(new File("D:\\8.test\\WebDataToFile"), "测试文件2", "时间", "/html/body/div[2]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[4]/div", "//*[@id='ifmbimcenter']", "//*[@id='src']");
+		WebDataToFile.webListDataToFile(new File("D:\\8.test\\WebDataToFile"), 
+				"测试文件2", 
+				"企业", 
+				"//div[2]/table/tbody/tr/td[3]/div", 
+				"//*[contains(@src, '/project/salary/choiceUser')]");
+		WebDataToFile.webListDataToFile(new File("D:\\8.test\\WebDataToFile"), 
+				"测试文件2", 
+				"姓名", 
+				"//div[2]/table/tbody/tr/td[4]/div", 
+				"//*[contains(@src, '/project/salary/choiceUser')]");
 	}
 	
 	/**
